@@ -1,12 +1,12 @@
 ---
-- name :nginx install nad run
+- name: nginx install and run
   hosts: frontend
   become: yes 
   tasks:
   - name: install nginx server
     ansible.builtin.packege:
      name: nginx 
-     state:present
+     state: present
 
 
 - name: start nginx
