@@ -1,0 +1,16 @@
+---
+- name :nginx install nad run
+  hosts: frontend
+  become: yes 
+  tasks:
+  - name: install nginx server
+    ansible.builtin.packege:
+     name: nginx 
+     state:present
+
+
+- name: start nginx
+  ansible.builtin.service:
+   name: nginx
+   state: started 
+   enabled: yes      
