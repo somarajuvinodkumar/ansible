@@ -1,6 +1,6 @@
  ---
 - name: ping the server
-  hosts: frontend
+  hosts: local
   tasks: null
 - name: ping the server
   ansible.builtin.ping: null
