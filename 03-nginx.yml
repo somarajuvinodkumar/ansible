@@ -1,17 +1,14 @@
 ---
-- name: nmap install and run
+- name: nginx install and run
   hosts: local
   become: yes
   tasks:
-    - name: install nmap server
+    - name: install python server
       ansible.builtin.package:
-        name: nmap
+        name: python
         state: present
-    - name: verify nmap installation
-      ansible.builtin.command: nmap --version
-      register: nmap_out
-
-    - name: show nmap version
-      ansible.builtin.debug:
-        var: nmap_out.stdout_lines[0]
-
+    - name: start nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes
