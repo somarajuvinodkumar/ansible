@@ -1,14 +1,14 @@
 ---
-- name: MySql install and run
+- name: nmap install and run
   hosts: local
   become: yes
   tasks:
-    - name: install MySql server
+    - name: install nmap server
       ansible.builtin.package:
-        name: MySql
+        name: nmap
         state: present
-    - name: start MySql
+    - name: start nmap
       ansible.builtin.service:
-        name: MySql
+        name: nmap
         state: started
         enabled: yes
