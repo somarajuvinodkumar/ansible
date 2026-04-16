@@ -1,14 +1,14 @@
 ---
-- name: python install and run
+- name: MySql install and run
   hosts: local
   become: yes
   tasks:
-    - name: install python server
+    - name: install MySql server
       ansible.builtin.package:
-        name: python
+        name: MySql
         state: present
-    - name: start python
+    - name: start MySql
       ansible.builtin.service:
-        name: python
+        name: MySql
         state: started
         enabled: yes
