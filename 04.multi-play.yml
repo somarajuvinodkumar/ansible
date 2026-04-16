@@ -10,8 +10,8 @@
       ansible.builtin.debug:
         msg: Hello from play1 and task-2
 - name: play2
-  hosts: local
-  connection: local
+  hosts: frontend
+  connection: all
   tasks:
     - name: hello from play2 and task1
       ansible.builtin.debug:
