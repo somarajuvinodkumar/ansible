@@ -7,8 +7,11 @@
       ansible.builtin.package:
         name: nmap
         state: present
-    - name: start nmap
-      ansible.builtin.service:
-        name: nmap
-        state: started
-        enabled: yes
+    - name: verify nmap installation
+      ansible.builtin.command: nmap --version
+      register: nmap_out
+
+    - name: show nmap version
+      ansible.builtin.debug:
+        var: nmap_out.stdout_lines[0]
+
