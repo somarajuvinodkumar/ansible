@@ -1,7 +1,7 @@
 ---
 - name: variables from files
-  hosts: vinod
-  connection: vinod
+  hosts: local
+  connection: local
   vars_files:
     - course.yml
   tasks:

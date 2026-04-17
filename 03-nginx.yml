@@ -1,9 +1,9 @@
 ---
 - name: nginx install and run
-  hosts: local
+  hosts: frontend
   become: yes
   tasks:
-    - name: install python server
+    - name: install nginx server
       ansible.builtin.package:
         name: python
         state: present
