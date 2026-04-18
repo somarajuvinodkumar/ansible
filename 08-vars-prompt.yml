@@ -1,7 +1,7 @@
 ---
 - name: variables from prompt
-  hosts: local
-  connection: local
+  hosts: frontend
+  connection: frontend
 
   vars_prompt:
     - name: USERNAME
@@ -9,7 +9,7 @@
       private: true
 
     - name: PASSWORD
-      prompt: please enter your PASSWORD
+      prompt: please enter your password
       private: true
 
   tasks:
