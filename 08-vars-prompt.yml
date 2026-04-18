@@ -1,7 +1,7 @@
 ---
 - name: variables from prompt
-  hosts: frontend
-  connection: frontend
+  hosts: local
+  connection: local
 
   vars_prompt:
     - name: USERNAME
