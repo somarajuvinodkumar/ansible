@@ -1,6 +1,6 @@
 ---
 - name: loops
-  host: local
+  hosts: local
   connection: local
   tasks:
     - name: print names
