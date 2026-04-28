@@ -3,13 +3,11 @@
   hosts: local
   connection: local
   vars:
-    persons: "chinna,vinod,pspk,vivo"
+    persons: chinna,vinod,pspk,vivo
   tasks:
-  - name: check undefined variable
-    ansible.builtin.debug:
-      msg: "welcome, {{ person | default('welcome') }}"
-
-  - name: print names
-    ansible.builtin.debug:
-      msg: "welcome, {{ person | split(',') }}"
-    
+    - name: check undefined variable
+      ansible.builtin.debug:
+        msg: welcome, {{ person | default('welcome') }}
+    - name: print names
+      ansible.builtin.debug:
+        msg: welcome, {{ person | split(',') }}
