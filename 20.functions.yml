@@ -10,15 +10,16 @@
         msg: "welcome, {{ persons | default('vinod') }}"
     - name: print names
       ansible.builtin.debug: null
-      msg: "Hello {{ persons | split(',') }}"
+        msg: "Hello {{ persons | split(',') }}"
     - name: convert map into list
       vars: null
       course:
         name: ansible
         duration: 10HR
         trainer: satyam
+
       ansible.builtin.debug: null
-      msg: "Course Info: {{ course | dict2items  }}"
+        msg: "Course Info: {{ course | dict2items  }}"
     - name: convert list into map
       vars: null
       course:
@@ -29,4 +30,4 @@
         - key: trainer
           value: satyam
       ansible.builtin.debug: null
-      msg: "Course Info: {{ course | items2dict  }}"
+        msg: "Course Info: {{ course | items2dict  }}"
