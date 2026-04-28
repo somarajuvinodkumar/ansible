@@ -9,6 +9,4 @@
       ansible.builtin.debug:
         msg: "welcome, {{ person | default('vinod') }}"
 
-    - name: print names
-      ansible.builtin.debug:
-        msg: "welcome, {{ person | split(',') }}"
+    
