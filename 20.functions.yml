@@ -3,16 +3,16 @@
   hosts: local
   connection: local
   vars:
-    persons: chinna,vinod,pspk,vivo
+    persons: "chinna,vinod,pspk,vivo"
   tasks:
     - name: check undefined variable
       ansible.builtin.debug:
-        msg: welcome, {{ persons | default('vinod') }}
+        msg: "welcome, {{ persons | default('vinod') }}"
     - name: print names
-      ansible.builtin.debug: null
-      msg: Hello, {{ persons | split(',') }}
+      ansible.builtin.debug:
+      msg: "Hello, {{ persons | split(',') }}"
     - name: convert map into list
-      vars: null
+      vars:
       course:
         name: ansible
         duration: 10HR
@@ -20,7 +20,7 @@
       ansible.builtin.debug:
         msg: "Course Info: {{ course | dict2items  }}"
     - name: convert list into map
-      vars: null
+      vars:
       course:
         - key: name
           value: ansible
