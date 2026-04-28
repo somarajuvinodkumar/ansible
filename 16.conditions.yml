@@ -7,4 +7,4 @@
       ansible.builtin.dnf:
         name: nginx
         state: present
-        when: ansible_os_family == "redhat"
+      when: ansible_os_family == "redhat"
