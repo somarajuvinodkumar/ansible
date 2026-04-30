@@ -5,12 +5,16 @@
   vars:
      GREETING: hello from play
   vars_files:
-    - course.yml   
+    - course.yml  
+  vars_prompt:
+     - name: GREETING
+       prompt: please enter the GREETING
+       private: false
   tasks:
-  - name: print the GREETING
-    ansible.builtin.debug:
-      msg: "{{ GREETING }}"
+   - name: print the GREETING
+     ansible.builtin.debug:
+        msg: "{{ GREETING }}"
   tasks:
-  - name: print the course information
-    ansible.builtin.debug:
-      msg: "course is {{ COURSE }}, duration {{ DURATION }}, trainer is {{ TRAINER }}"
+    - name: print the course information
+      ansible.builtin.debug:
+          msg: "course is {{ COURSE }}, duration {{ DURATION }}, trainer is {{ TRAINER }}"
