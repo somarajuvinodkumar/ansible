@@ -6,14 +6,14 @@
       GREETING: Hello from play
   vars_files:
     - course.yml
-  vars_prompt:
+  #vars_prompt:
     - name: GREETING
       prompt: Please enter the GREETING
       private: false
-  tasks:
+  #tasks:
     - name: print the GREETING
-  vars: 
-  - name: understand vars preference
-    GREETING: Hello from task
-    ansible.builtin.debug:
-        msg: "{{ GREETING }}"
+ # vars:  
+- name: understand vars preference
+  GREETING: Hello from task
+  ansible.builtin.debug:
+  msg: "{{ GREETING }}"
