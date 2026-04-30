@@ -13,6 +13,8 @@
 
   vars:
     COURSE: DevSecOps
+    DURATION: 120hrs
+    TRAINER: satyam
   tasks:
   - name: print the course information 
     ansible.builtin.debug:
