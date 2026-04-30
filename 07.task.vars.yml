@@ -11,11 +11,8 @@
     ansible.builtin.debug:
       msg: "hi {{ COURSE }}, duration {{ DURATION }}, trainer is {{ TRAINER }}"  
 
-  vars:
-    COURSE: DevSecOps
-    DURATION: 120hrs
-    TRAINER: satyam
-  tasks:
-  - name: print the course information 
+  - name: override course for this task
+    vars:
+      COURSE: DevSecOps
     ansible.builtin.debug:
       msg: "hello {{ COURSE }}, duration {{ DURATION }}, trainer is {{ TRAINER }}"
