@@ -3,16 +3,16 @@
   hosts: local
   connection: local
   vars:
-    GREETING: Hello from play
+      GREETING: Hello from play
   vars_files:
     - course.yml
   vars_prompt:
-- name: GREETING
-  prompt: Please enter the GREETING
-  private: false
+    - name: GREETING
+      prompt: Please enter the GREETING
+      private: false
   tasks:
   - name: print the GREETING
-    vars: 
+  vars: 
   - name: understand vars preference
       GREETING: Hello from task
     ansible.builtin.debug:
