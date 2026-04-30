@@ -4,8 +4,8 @@
   connection: local
   vars:
       GREETING: Hello from play
-#   #vars_files:
-#   - course.yml
+  vars_files:
+  - course.yml
 #   #vars_prompt:
 #     - name: GREETING
 #       prompt: Please enter the GREETING
