@@ -2,11 +2,16 @@
 - name: understand vars preference
   hosts: local
   connection: local
-  vars:
-     GREETING: hello from play
+  # vars:
+  #    GREETING: hello from play
   vars_files:
     - course.yml   
   # tasks:
   # - name: print the GREETING
   #   ansible.builtin.debug:
   #     msg: "{{ GREETING }}"
+  tasks:
+  - name: print the course information
+    ansible.builtin.debug:
+      msg: "course is {{ COURSE }}, duration {{ DURATION }}, trainer is {{ TRAINER }}"
+      
