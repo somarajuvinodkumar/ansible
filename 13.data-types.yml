@@ -1,20 +1,18 @@
----
 - name: ansible datatypes
   hosts: local
   connection: local
   vars:
-    DURATION: 120 # this is number
-    COURSE: DevSecOps with aws # string
+    DURATION: 120
+    COURSE: DevSecOps with aws
     IS_LIVE: yes
-    TOOLS: # list []
-    - linux
-    - shell
-    - ansible
-    CONCEPTS: # map or dictionary or object. referred like {}
+    TOOLS:
+      - linux
+      - shell
+      - ansible
+    CONCEPTS:
       CI: jenkins
-      SCRIPTING: "shell,ansible,terraform,python"
+      SCRIPTING: shell,ansible,terraform,python
   tasks:
-  - name: print course information
-    ansible.builtin.debug:
-       msg: "course is: {{ COURSE }}, duration:{{ DURATION }}, is live: {{ IS_LIVE }}, concepts are: {{ CONCEPTS }}, tools are: {{ TOOLS }}"
-           
+    - name: print course information
+      ansible.builtin.debug:
+        msg: "course is: {{ COURSE }}, duration:{{ DURATION }}, is live: {{ IS_LIVE }}, concepts are: {{ CONCEPTS }}, tools are: {{ TOOLS }}"
