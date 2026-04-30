@@ -14,7 +14,7 @@
    - name: print the GREETING
      ansible.builtin.debug:
         msg: "{{ GREETING }}"
-  tasks:
-    - name: print the course information
-      ansible.builtin.debug:
-          msg: "course is {{ COURSE }}, duration {{ DURATION }}, trainer is {{ TRAINER }}"
+  # tasks:
+  #   - name: print the course information
+  #     ansible.builtin.debug:
+  #         msg: "course is {{ COURSE }}, duration {{ DURATION }}, trainer is {{ TRAINER }}"
