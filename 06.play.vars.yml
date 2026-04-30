@@ -7,10 +7,9 @@
     DURATION: 120hrs
     TRAINER: satyam
   tasks:
-  - name: print the couse information
-    ansible.builtin.debug:
-      msg: "hi {{ COURSE }}, duration {{ DURATION }}, trainer is {{ TRAINER }}"
-
+    - name: print the couse information
+      ansible.builtin.debug:
+        msg: hi {{ COURSE }}, duration {{ DURATION }}, trainer is {{ TRAINER }}
 - name: print the coures information again
   ansible.builtin.debug:
-    msg: "hi {{ COURSE }}, duration {{ DURATION }}, trainer is {{ TRAINER }}"    
+    msg: hi {{ COURSE }}, duration {{ DURATION }}, trainer is {{ TRAINER }}
