@@ -1,5 +1,5 @@
 ---
-- name: defined variables
+- name: understand vars preference
   hosts: local
   connection: local
   vars:
@@ -11,9 +11,9 @@
       prompt: Please enter the GREETING
       private: false
   tasks:
-  - name: print the GREETING
+   - name: print the GREETING
   vars: 
   - name: understand vars preference
-      GREETING: Hello from task
+    GREETING: Hello from task
     ansible.builtin.debug:
         msg: "{{ GREETING }}"
